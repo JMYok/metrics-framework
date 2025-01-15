@@ -22,6 +22,7 @@ func NewConsoleReporter(metricsStorage storage.MetricsStorage) *ConsoleReporter 
 	}
 }
 
+// StartRepeatedReport periodInSeconds:统计间隔时间，durationInSeconds 接口间隔时间
 func (cr *ConsoleReporter) StartRepeatedReport(periodInSeconds, durationInSeconds int64) {
 	cr.executor = time.NewTicker(time.Duration(periodInSeconds) * time.Second)
 	go func() {

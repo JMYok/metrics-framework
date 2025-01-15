@@ -2,8 +2,8 @@ package model
 
 type RequestInfo struct {
 	ApiName      string
-	ResponseTime float64
-	Timestamp    float64
+	ResponseTime float64 //响应时间
+	Timestamp    float64 //触发时间戳
 }
 
 type RequestStat struct {
